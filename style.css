@@ -9,7 +9,7 @@
 }
 
 body {
-  background: #1C1A19;
+  background: #1c1a19;
   height: 100vh;
 }
 
@@ -19,7 +19,7 @@ section {
 }
 
 nav {
-  background: #3E3C3C;
+  background: #3e3c3c;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -100,7 +100,7 @@ nav .logo {
 .description h1 {
   font-family: 'Crete Round', serif;
   font-weight: 400;
-  color: #F55800;
+  color: #f55800;
   font-size: 72px;
 }
 
