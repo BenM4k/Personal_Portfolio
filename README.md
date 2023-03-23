@@ -1,7 +1,7 @@
 <a name="readme-top"></a>
 
 <div align="center">
-  <img src="celec.png" alt="logo" width="140"  height="auto" />
+  <img src="assets/celec.png" alt="logo" width="140"  height="auto" />
   <br/>
 
   <h2><b>Personal Portfolio</b></h2>
