@@ -176,7 +176,7 @@ main .home .headline .description h1 {
     font-weight: 400;
     font-size: 65px;
     line-height: 82px;
-    columns: #F55800;
+    columns: #f55800;
   }
 }
 main .home .headline .description h2 {
@@ -210,7 +210,7 @@ main .home .headline .description p {
     width: 500px;
     font-size: 20px;
     line-height: 32px;
-    color: #F4F5F7;
+    color: #f4f5f7;
   }
 }
 main .home .headline_list {
@@ -272,7 +272,6 @@ main .home .headline_list li {
     margin-bottom: 0;
     align-items: center;
     padding: 0;
-    margin: 0;
     color: #091e42;
     font-size: 40px;
     line-height: 52px;

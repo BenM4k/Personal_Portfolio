@@ -190,7 +190,7 @@ main {
             font-weight: 400;
             font-size: 65px;
             line-height: 82px;
-            columns: #F55800;
+            columns: #f55800;
           }
         }
 
@@ -224,7 +224,7 @@ main {
             width: 500px;
             font-size: 20px;
             line-height: 32px;
-            color: #F4F5F7;
+            color: #f4f5f7;
           }
         }
       }
@@ -295,7 +295,6 @@ main {
         margin-bottom: 0;
         align-items: center;
         padding: 0;
-        margin: 0;
         color: #091e42;
         font-size: 40px;
         line-height: 52px;
@@ -317,7 +316,6 @@ main {
       gap: 20px;
     }
   }
-
 
   .work1 {
     align-items: flex-start;
@@ -391,7 +389,6 @@ main {
         gap: 10px;
       }
     }
-
 
     @media screen and (min-width: 768px) {
       flex-direction: row;
@@ -565,8 +562,8 @@ main {
         }
 
         @media screen and (min-width: 768px) {
-            align-items: center;
-            justify-content: center;
+          align-items: center;
+          justify-content: center;
         }
       }
 
@@ -589,6 +586,7 @@ main {
       align-items: flex-start;
       margin-top: 100px;
     }
+
     @media screen and (max-width: 768px) {
       align-items: center;
     }
