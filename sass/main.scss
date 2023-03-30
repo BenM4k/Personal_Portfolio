@@ -52,6 +52,13 @@ body {
   font-size: 15px;
   line-height: 20px;
   cursor: pointer;
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    font-size: 10px;
+    line-height: 15px;
+    font-weight: 400;
+    padding: 6px 8px;
+  }
 }
 
 .button_enabled {
@@ -89,12 +96,12 @@ header {
   justify-content: space-between;
   background: #3c3a39;
   position: absolute;
-  width: 450px;
   height: 92px;
   left: 0;
   top: 0;
   z-index: 1;
   padding-top: 20px;
+  overflow-x: hidden;
 
   .logo {
     margin: 10px 30px;
@@ -129,7 +136,19 @@ header {
     }
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (max-width: 767px) {
+    width: 450px;
+  }
+
+  @media screen and (min-width: 451px) and (max-width: 767px) {
+    width: 450px;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    width: 100%;
+  }
+
+  @media screen and (min-width: 1200px) {
     width: 100%;
 
     .logo {
@@ -185,12 +204,12 @@ main {
           line-height: 64px;
           letter-spacing: 0.37px;
 
-          @media screen and (min-width: 768px) {
+          @media screen and (min-width: 1201px) {
             font-family: 'Crete Round', sans-serif;
             font-weight: 400;
             font-size: 65px;
             line-height: 82px;
-            columns: #f55800;
+            color: #f55800;
           }
         }
 
@@ -243,7 +262,12 @@ main {
       }
     }
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 769px) and (max-width: 1200px) {
+      background-size: 300px;
+      background-position: bottom right;
+    }
+
+    @media screen and (min-width: 1200px) {
       background-size: 610px;
       background-position: right;
     }
@@ -319,14 +343,19 @@ main {
 
   .work1 {
     align-items: flex-start;
-    justify-content: center;
 
     img {
       width: 100%;
       margin-top: 80px;
 
-      @media screen and (min-width: 768px) {
+      @media screen and (min-width: 768px) and (max-width: 1199px) {
         width: 70%;
+        height: 440px;
+        margin-top: 0;
+      }
+
+      @media screen and (min-width: 1200px) {
+        width: 60%;
         height: 448px;
         margin-top: 0;
       }
@@ -341,7 +370,13 @@ main {
         line-height: 44px;
         margin-top: 15px;
 
-        @media screen and (min-width: 768px) {
+        @media screen and (min-width: 768px) and (max-width: 1199px) {
+          line-height: 52px;
+          color: #091e42;
+          margin: 0;
+        }
+
+        @media screen and (min-width: 1200px) {
           font-size: 40px;
           line-height: 52px;
           color: #091e42;
@@ -359,7 +394,6 @@ main {
         width: 100%;
 
         @media screen and (min-width: 768px) {
-          font-size: 20px;
           line-height: 28px;
           color: #091e42;
         }
@@ -378,94 +412,151 @@ main {
         }
       }
 
-      .work1_button {
-        width: 30%;
+      @media screen and (min-width: 768px) and (max-width: 1199px) {
+        width: 45%;
       }
 
-      @media screen and (min-width: 768px) {
-        display: flex;
-        flex-direction: column;
-        width: 540px;
-        gap: 10px;
+      @media screen and (min-width: 1200px) {
+        width: 30%;
       }
     }
 
-    @media screen and (min-width: 768px) {
+    .work1_button {
+      width: 40%;
+
+      @media screen and (min-width: 768px) and (max-width: 1199px) {
+        width: 50%;
+      }
+
+      @media screen and (min-width: 1200px) {
+        width: 40%;
+      }
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      display: flex;
       flex-direction: row;
-      margin-top: 50px;
       gap: 20px;
+      width: 100%;
+    }
+
+    @media screen and (min-width: 1200px) {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+      width: 100%;
     }
   }
 
   .works {
-    display: grid;
-    row-gap: 20px;
+  display: grid;
+  row-gap: 20px;
 
-    .work {
-      display: flex;
-      flex-direction: column;
-      margin-top: 20px;
-      background-image: url(../assets/Mask\ Group.png);
-      background-size: cover;
-      background-repeat: no-repeat;
-      height: 450px;
-      position: relative;
+  .work {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    background-image: url(../assets/Mask\ Group.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 450px;
+    position: relative;
 
-      .work_title {
-        padding-top: 100px;
-        padding-left: 10px;
-        color: #fff;
-        font-family: 'Crete Round', sans-serif;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 32px;
-        line-height: 44px;
-        width: 100%;
-      }
+    .work_title {
+      padding-top: 100px;
+      padding-left: 10px;
+      color: #fff;
+      font-family: 'Crete Round', sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 32px;
+      line-height: 44px;
+      width: 100%;
 
-      .work_text {
-        width: 250px;
-        padding-top: 10px;
-        padding-left: 10px;
-        color: #fff;
-        font-family: 'Inter', sans-serif;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 24px;
-      }
-
-      div {
-        .work_list {
-          margin-top: 20px;
-          padding-left: 10px;
-          align-items: center;
-          justify-content: flex-start;
-          gap: 10px;
-
-          li {
-            list-style-type: none;
-          }
-        }
-      }
-
-      .see_project {
-        position: absolute;
-        width: 100%;
-        bottom: 0;
+      @media screen and (min-width: 768px) and (max-width: 1199px) {
+        font-size: 25px;
       }
     }
 
+    .work_text {
+      width: 250px;
+      padding-top: 10px;
+      padding-left: 10px;
+      color: #fff;
+      font-family: 'Inter', sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+
+      @media screen and (min-width: 768px) and (max-width: 1199px) {
+        font-size: 14px;
+        width: 200px;
+      }
+    }
+
+    div {
+      .work_list {
+        margin-top: 20px;
+        padding-left: 10px;
+        align-items: center;
+        gap: 10px;
+
+        li {
+          button {
+            @media screen and (min-width: 768px) and (max-width: 1199px) {
+            width: 100%;
+            font-size: 10px;
+          }
+          }
+        }
+      }
+    }
+
+    .see_project {
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+    }
+
     @media screen and (min-width: 768px) {
-      margin-top: 10px;
-      grid-template-columns: 1fr 1fr 1fr;
-      column-gap: 20px;
+      &:hover{
+        background-image: url(../assets/lightbg.png);
+        background-color: #fff;
+        .work_title {
+          display: none;
+        }
+
+        .work_text {
+          display: none;
+        }
+
+        div {
+          display: none;
+        }
+      }
     }
   }
 
   @media screen and (min-width: 768px) {
-    width: 100%;
-    padding: 120px;
+    margin-top: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 20px;
+  }
+}
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    flex-direction: column;
+    margin-top: 50px;
+    padding: 60px 60px;
+    gap: 20px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    flex-direction: column;
+    padding: 60px 120px;
+    margin-top: 50px;
+    gap: 20px;
   }
 }
 
@@ -522,7 +613,7 @@ main {
       width: 50%;
 
       @media screen and (min-width: 768px) {
-        width: 15%;
+        width: 25%;
       }
     }
 
@@ -559,12 +650,20 @@ main {
           font-weight: 700;
           font-size: 32px;
           line-height: 44px;
+
+          @media screen and (min-width: 769px) and (max-width: 1199px) {
+            font-size: 24px;
+            line-height: 44px;
+          }
         }
 
         @media screen and (min-width: 768px) {
           align-items: center;
-          justify-content: center;
         }
+
+        @media screen and (max-width: 468px) {
+            justify-content: center;
+          }
       }
 
       .mini_list {
@@ -573,6 +672,12 @@ main {
         justify-content: center;
         gap: 24px;
         padding-top: 10px;
+
+        li {
+          @media screen and (min-width: 769px) and (max-width: 1199px) {
+            font-size: 15px;
+          }
+        }
 
         @media screen and (min-width: 768px) {
           align-items: flex-start;
@@ -586,13 +691,13 @@ main {
       align-items: flex-start;
       margin-top: 100px;
     }
-
-    @media screen and (max-width: 768px) {
-      align-items: center;
-    }
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 769px) and (max-width: 1199px) {
+    padding: 60px;
+    width: 100%;
+  }
+  @media screen and (min-width: 1200px) {
     width: 100%;
     padding: 120px;
   }
@@ -609,7 +714,7 @@ main {
     font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: 700;
-    font-size: 32px;
+    font-size: 28px;
     line-height: 44px;
     text-align: center;
     margin-bottom: 50px;
