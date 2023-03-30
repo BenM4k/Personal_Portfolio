@@ -13,6 +13,12 @@
             <a href="#" class="logo_link">My logo</a>
         </nav>
         <nav class="flex">
+            <ul class="header_list flex">
+                <li>Portfolio</li>
+                <li>About</li>
+                <li>Contact</li>
+                <li><img src="assets/Disabled.png" alt=""></li>
+            </ul>
             <a href="#" class="burgeur flex"><img src="assets/Icon - Menu.png" alt="menu"></a>
         </nav>
     </header>
@@ -20,7 +26,7 @@
     <main>
         <section id="Home" class="home">
             <div class="headline flex_column">
-                <div class="description">
+                <div class="description item">
                     <h1>Hey There <br> I'm Ben.</h1>
                     <h2>I'm a Software Developer</h2>
                     <p>I can help you build a product , feature or website.
@@ -28,7 +34,7 @@
                          If you like what you see and have a project you need coded, 
                         don’t hesitate to contact me.</p>
                 </div>
-                <ul class="headline_list flex">
+                <ul class="headline_list flex item">
                     <li><a href="https://github.com/BenM4k"><img src="assets/github.svg" alt="github"></a></li>
                     <li>
                         <a href="https://www.linkedin.com/in/b%C3%A9n%C3%A9dict-makomo-885856248/">
@@ -43,26 +49,31 @@
         </section>
 
         <section id="works" class="work_section flex_column">
-            <h2 class="title">My Recent Works</h2>
-            <img src="assets/Vector.png" alt="vector">
+            <div class="work_head">
+                <h2 class="title">My Recent Works</h2>
+                <img src="assets/Vector.png" alt="vector" class="work_head_img">
+            </div>
 
             <div class="work1 flex_column">
                 <img src="assets/Img Placeholder.png" alt="placeholder">
-                <h2 class="work1_title">Multi-Post Stories</h2>
-                <p class="work1_text">A daily selection of privately 
-                    personalized reads; no accounts 
-                    or sign-ups required. has been 
-                    the industry's standard dummy 
-                    text ever since the 1500s, when 
-                    an unknown printer took a 
-                    standard dummy text.</p>
-                <ul class="work1_list flex">
-                    <li><button class="work_button">Css</button></li>
-                    <li><button class="work_button">HTML</button></li>
-                    <li><button class="work_button">Bootstrap</button></li>
-                    <li><button class="work_button">Ruby</button></li>
-                </ul>
-                <button class="button_enabled">See project</button>
+                <div class="work1_head">
+                    <h2 class="work1_title">Multi-Post Stories</h2>
+                    <p class="work1_text">A daily selection of privately 
+                        personalized reads; no accounts 
+                        or sign-ups required. has been 
+                        the industry's standard dummy 
+                        text ever since the 1500s, when 
+                        an unknown printer took a 
+                        standard dummy text.</p>
+                    <ul class="work1_list flex">
+                        <li><button class="work_button">Css</button></li>
+                        <li><button class="work_button">HTML</button></li>
+                        <li><button class="work_button">Bootstrap</button></li>
+                        <li><button class="work_button">Ruby</button></li>
+                    </ul>
+                    <button class="work1_button button_enabled">See project</button>
+                </div>
+                
             </div>    
             
             <div class="works">
@@ -83,8 +94,8 @@
                 </div>
 
                 <div class="work">
-                    <h2>Profesional Art <br>Printing Data</h2>
-                    <p>A daily selection of privately 
+                    <h2 class="work_title">Profesional Art <br>Printing Data</h2>
+                    <p class="work_text">A daily selection of privately 
                         personalized reads; no accounts 
                         or sign-ups required. Has been 
                         the industry's standard.</p>
@@ -99,8 +110,8 @@
                 </div>
 
                 <div class="work">
-                    <h2>Profesional Art <br>Printing Data</h2>
-                    <p>A daily selection of privately 
+                    <h2 class="work_title">Profesional Art <br>Printing Data</h2>
+                    <p class="work_text">A daily selection of privately 
                         personalized reads; no accounts 
                         or sign-ups required. Has been 
                         the industry's standard.</p>
@@ -115,8 +126,8 @@
                 </div>
 
                 <div class="work">
-                    <h2>Profesional Art <br>Printing Data</h2>
-                    <p>A daily selection of privately 
+                    <h2 class="work_title">Profesional Art <br>Printing Data</h2>
+                    <p class="work_text">A daily selection of privately 
                         personalized reads; no accounts 
                         or sign-ups required. Has been 
                         the industry's standard.</p>
@@ -131,8 +142,8 @@
                 </div>
 
                 <div class="work">
-                    <h2>Profesional Art <br>Printing Data</h2>
-                    <p>A daily selection of privately 
+                    <h2 class="work_title">Profesional Art <br>Printing Data</h2>
+                    <p class="work_text">A daily selection of privately 
                         personalized reads; no accounts 
                         or sign-ups required. Has been 
                         the industry's standard.</p>
@@ -147,8 +158,8 @@
                 </div>
 
                 <div class="work">
-                    <h2>Profesional Art <br>Printing Data</h2>
-                    <p>A daily selection of privately 
+                    <h2 class="work_title">Profesional Art <br>Printing Data</h2>
+                    <p class="work_text">A daily selection of privately 
                         personalized reads; no accounts 
                         or sign-ups required. Has been 
                         the industry's standard.</p>
@@ -199,6 +210,7 @@
                         <li>Ruby ob Rails</li>
                         <li>RSpec</li>
                         <li>Capybara</li>
+                        <li>Selenium</li>
                     </ul>
                 </li>
                 <li class="lists flex_column">
