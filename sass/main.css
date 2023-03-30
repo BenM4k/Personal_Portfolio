@@ -579,12 +579,12 @@ main .home .headline_list li {
     color: #f4f5f7;
   }
 }
-.about .about_me button {
+.about .about_me .about_me_button {
   margin-top: 20px;
   width: 50%;
 }
 @media screen and (min-width: 768px) {
-  .about .about_me button {
+  .about .about_me .about_me_button {
     width: 25%;
   }
 }
@@ -646,7 +646,7 @@ main .home .headline_list li {
   padding-top: 10px;
 }
 @media screen and (min-width: 769px) and (max-width: 1199px) {
-  .about .list .lists .mini_list li {
+  .about .list .lists .mini_list .mini_mini_list {
     font-size: 15px;
   }
 }

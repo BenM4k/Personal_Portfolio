@@ -449,101 +449,102 @@ main {
   }
 
   .works {
-  display: grid;
-  row-gap: 20px;
+    display: grid;
+    row-gap: 20px;
 
-  .work {
-    display: flex;
-    flex-direction: column;
-    margin-top: 20px;
-    background-image: url(../assets/Mask\ Group.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 450px;
-    position: relative;
+    .work {
+      display: flex;
+      flex-direction: column;
+      margin-top: 20px;
+      background-image: url(../assets/Mask\ Group.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 450px;
+      position: relative;
 
-    .work_title {
-      padding-top: 100px;
-      padding-left: 10px;
-      color: #fff;
-      font-family: 'Crete Round', sans-serif;
-      font-style: normal;
-      font-weight: 400;
-      font-size: 32px;
-      line-height: 44px;
-      width: 100%;
-
-      @media screen and (min-width: 768px) and (max-width: 1199px) {
-        font-size: 25px;
-      }
-    }
-
-    .work_text {
-      width: 250px;
-      padding-top: 10px;
-      padding-left: 10px;
-      color: #fff;
-      font-family: 'Inter', sans-serif;
-      font-style: normal;
-      font-weight: 400;
-      font-size: 16px;
-      line-height: 24px;
-
-      @media screen and (min-width: 768px) and (max-width: 1199px) {
-        font-size: 14px;
-        width: 200px;
-      }
-    }
-
-    div {
-      .work_list {
-        margin-top: 20px;
+      .work_title {
+        padding-top: 100px;
         padding-left: 10px;
-        align-items: center;
-        gap: 10px;
+        color: #fff;
+        font-family: 'Crete Round', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 44px;
+        width: 100%;
 
-        li {
-          button {
-            @media screen and (min-width: 768px) and (max-width: 1199px) {
-            width: 100%;
-            font-size: 10px;
-          }
+        @media screen and (min-width: 768px) and (max-width: 1199px) {
+          font-size: 25px;
+        }
+      }
+
+      .work_text {
+        width: 250px;
+        padding-top: 10px;
+        padding-left: 10px;
+        color: #fff;
+        font-family: 'Inter', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+
+        @media screen and (min-width: 768px) and (max-width: 1199px) {
+          font-size: 14px;
+          width: 200px;
+        }
+      }
+
+      div {
+        .work_list {
+          margin-top: 20px;
+          padding-left: 10px;
+          align-items: center;
+          gap: 10px;
+
+          li {
+            button {
+              @media screen and (min-width: 768px) and (max-width: 1199px) {
+                width: 100%;
+                font-size: 10px;
+              }
+            }
           }
         }
       }
-    }
 
-    .see_project {
-      position: absolute;
-      width: 100%;
-      bottom: 0;
+      .see_project {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+      }
+
+      @media screen and (min-width: 768px) {
+        &:hover {
+          background-image: url(../assets/lightbg.png);
+          background-color: #fff;
+
+          .work_title {
+            display: none;
+          }
+
+          .work_text {
+            display: none;
+          }
+
+          div {
+            display: none;
+          }
+        }
+      }
     }
 
     @media screen and (min-width: 768px) {
-      &:hover{
-        background-image: url(../assets/lightbg.png);
-        background-color: #fff;
-        .work_title {
-          display: none;
-        }
-
-        .work_text {
-          display: none;
-        }
-
-        div {
-          display: none;
-        }
-      }
+      margin-top: 10px;
+      grid-template-columns: 1fr 1fr 1fr;
+      column-gap: 20px;
     }
   }
-
-  @media screen and (min-width: 768px) {
-    margin-top: 10px;
-    grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 20px;
-  }
-}
 
   @media screen and (min-width: 768px) and (max-width: 1199px) {
     flex-direction: column;
@@ -608,7 +609,7 @@ main {
       }
     }
 
-    button {
+    .about_me_button {
       margin-top: 20px;
       width: 50%;
 
@@ -662,8 +663,8 @@ main {
         }
 
         @media screen and (max-width: 468px) {
-            justify-content: center;
-          }
+          justify-content: center;
+        }
       }
 
       .mini_list {
@@ -673,7 +674,7 @@ main {
         gap: 24px;
         padding-top: 10px;
 
-        li {
+        .mini_mini_list {
           @media screen and (min-width: 769px) and (max-width: 1199px) {
             font-size: 15px;
           }
@@ -697,6 +698,7 @@ main {
     padding: 60px;
     width: 100%;
   }
+
   @media screen and (min-width: 1200px) {
     width: 100%;
     padding: 120px;
