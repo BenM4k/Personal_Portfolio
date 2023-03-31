@@ -20,11 +20,11 @@
 }
 
 body {
-  max-width: 450px;
+  width: 100%;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 450px) {
   body {
-    max-width: fit-content;
+    width: fit-content;
   }
 }
 
@@ -137,7 +137,7 @@ header nav .burgeur {
 }
 @media screen and (min-width: 451px) and (max-width: 767px) {
   header {
-    width: 450px;
+    width: 100%;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -175,6 +175,7 @@ main .home {
   background-position: bottom 0 right -20px;
   background-color: #1c1a19;
   padding-bottom: 250px;
+  width: 100%;
 }
 main .home .headline {
   position: relative;
@@ -259,7 +260,7 @@ main .home .headline_list li {
     background-position: right;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 500px) {
   main {
     width: 100%;
   }
@@ -653,6 +654,11 @@ main .home .headline_list li {
 @media screen and (min-width: 768px) {
   .about .list .lists .mini_list {
     align-items: flex-start;
+  }
+}
+@media screen and (min-width: 469px) and (max-width: 767px) {
+  .about .list .lists {
+    align-items: center;
   }
 }
 @media screen and (min-width: 768px) {

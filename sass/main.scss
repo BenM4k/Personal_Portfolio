@@ -21,10 +21,10 @@
 }
 
 body {
-  max-width: 450px;
+  width: 100%;
 
-  @media screen and (min-width: 768px) {
-    max-width: fit-content;
+  @media screen and (min-width: 450px) {
+    width: fit-content;
   }
 }
 
@@ -141,7 +141,7 @@ header {
   }
 
   @media screen and (min-width: 451px) and (max-width: 767px) {
-    width: 450px;
+    width: 100%;
   }
 
   @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -186,6 +186,7 @@ main {
     background-position: bottom 0 right -20px;
     background-color: #1c1a19;
     padding-bottom: 250px;
+    width: 100%;
 
     .headline {
       position: relative;
@@ -273,7 +274,7 @@ main {
     }
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 500px) {
     width: 100%;
 
     .headline {
@@ -683,6 +684,10 @@ main {
         @media screen and (min-width: 768px) {
           align-items: flex-start;
         }
+      }
+
+      @media screen and (min-width: 469px) and (max-width: 767px) {
+        align-items: center;
       }
     }
 
