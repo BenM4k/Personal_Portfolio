@@ -57,7 +57,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://github.com/BenM4k/hellomicroverse/)
+- [Live Demo Link](https://benm4k.github.io/Personal_Portfolio/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
