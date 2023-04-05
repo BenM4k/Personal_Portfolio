@@ -12,13 +12,12 @@ header {
     .logo {
       color: #fff;
       padding: 0 20px;
-  
       font-family: "Roboto", sans-serif;
       font-weight: 700;
       font-size: 15px;
       font-style: normal;
-  
-      @media screen and (min-width: 768px){
+
+      @media screen and (min-width: 768px) {
         font-size: 20px;
         padding: 0;
         margin-left: 80px;
@@ -31,7 +30,8 @@ header {
 
       #check {
         display: none;
-        @media screen and (min-width: 768px){
+
+        @media screen and (min-width: 768px) {
           display: inline-block;
         }
       }
@@ -52,7 +52,7 @@ header {
       margin-right: 20px;
       font-size: 50px;
 
-      @media screen and (min-width: 768px){
+      @media screen and (min-width: 768px) {
         display: none;
       }
     }
