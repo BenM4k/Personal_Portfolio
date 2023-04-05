@@ -1,0 +1,60 @@
+header {
+  background: #3c3a39;
+  height: 90px;
+  width: 100%;
+
+  nav {
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 20px;
+
+    .logo {
+      color: #fff;
+      padding: 0 20px;
+      font-family: "Roboto", sans-serif;
+      font-weight: 700;
+      font-size: 15px;
+      font-style: normal;
+
+      @media screen and (min-width: 768px) {
+        font-size: 20px;
+        padding: 0;
+        margin-left: 80px;
+      }
+    }
+
+    .header_list {
+      margin-right: 80px;
+      align-items: center;
+
+      #check {
+        display: none;
+
+        @media screen and (min-width: 768px) {
+          display: inline-block;
+        }
+      }
+
+      .list {
+        display: inline-block;
+        margin: 0 5px;
+
+        a {
+          color: #fff;
+          font-size: 18px;
+          text-decoration: none;
+        }
+      }
+    }
+
+    .burgeur {
+      margin-right: 20px;
+      font-size: 50px;
+
+      @media screen and (min-width: 768px) {
+        display: none;
+      }
+    }
+  }
+}
