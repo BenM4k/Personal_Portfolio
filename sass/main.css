@@ -11,25 +11,22 @@ header nav {
   height: 100%;
   align-items: center;
   justify-content: space-between;
-  padding-right: 20px;
 }
 header nav .logo {
-  color: #fff;
-  padding: 0 20px;
+  color: #f1f1f1;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 15px;
   font-style: normal;
+  text-decoration: none;
 }
 @media screen and (min-width: 768px) {
   header nav .logo {
     font-size: 20px;
     padding: 0;
-    margin-left: 80px;
   }
 }
 header nav .header_list {
-  margin-right: 80px;
   align-items: center;
 }
 header nav .header_list #check {
@@ -45,17 +42,40 @@ header nav .header_list .list {
   margin: 0 5px;
 }
 header nav .header_list .list a {
-  color: #fff;
+  color: #f1f1f1;
   font-size: 18px;
   text-decoration: none;
 }
-header nav .burgeur {
-  margin-right: 20px;
-  font-size: 50px;
+header nav .header_list .list a:hover {
+  color: #de7a22;
 }
 @media screen and (min-width: 768px) {
   header nav .burgeur {
     display: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  header {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+@media screen and (min-width: 768px) {
+  header {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1280px) {
+  header {
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+}
+@media screen and (min-width: 1281px) {
+  header {
+    padding-left: 360px;
+    padding-right: 360px;
   }
 }
 
@@ -69,13 +89,12 @@ main .home {
   background-size: 270px;
   background-position: bottom 0 right -20px;
   background-color: #1c1a19;
-  padding-bottom: 250px;
+  padding-bottom: 380px;
   width: 100%;
 }
 main .home .headline {
   position: relative;
-  padding-top: 200px;
-  padding-left: 30px;
+  padding-top: 100px;
 }
 main .home .headline .description {
   color: #fff;
@@ -178,7 +197,6 @@ main .home .headline_list li {
 
 .work_section {
   background-color: #fff;
-  padding: 0 30px;
   padding-bottom: 100px;
 }
 .work_section .work_head .title {
@@ -416,14 +434,12 @@ main .home .headline_list li {
   .work_section {
     flex-direction: column;
     margin-top: 50px;
-    padding: 60px 60px;
     gap: 20px;
   }
 }
 @media screen and (min-width: 1200px) {
   .work_section {
     flex-direction: column;
-    padding: 60px 120px;
     margin-top: 50px;
     gap: 20px;
   }
@@ -432,8 +448,6 @@ main .home .headline_list li {
 .about {
   background: #1c1a19;
   padding-top: 50px;
-  padding-left: 30px;
-  padding-right: 30px;
   padding-bottom: 90px;
 }
 .about .about_me {
@@ -566,14 +580,12 @@ main .home .headline_list li {
 }
 @media screen and (min-width: 769px) and (max-width: 1199px) {
   .about {
-    padding: 60px;
     width: 100%;
   }
 }
 @media screen and (min-width: 1200px) {
   .about {
     width: 100%;
-    padding: 120px;
   }
 }
 
@@ -652,10 +664,11 @@ main .home .headline_list li {
 }
 @media screen and (min-width: 768px) {
   .contacts {
+    padding-top: 200px;
+    padding-bottom: 200px;
     width: 100%;
     display: flex;
     flex-direction: row;
-    padding: 100px 110px;
   }
 }
 
@@ -769,4 +782,29 @@ body {
 .button_enabled:disabled {
   background: #f4f1f0;
   color: #5b5957;
+}
+
+@media screen and (max-width: 767px) {
+  section {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+@media screen and (min-width: 768px) {
+  section {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1280px) {
+  section {
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+}
+@media screen and (min-width: 1281px) {
+  section {
+    padding-left: 360px;
+    padding-right: 360px;
+  }
 }/*# sourceMappingURL=main.css.map */

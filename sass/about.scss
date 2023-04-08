@@ -1,8 +1,6 @@
 .about {
   background: #1c1a19;
   padding-top: 50px;
-  padding-left: 30px;
-  padding-right: 30px;
   padding-bottom: 90px;
 
   .about_me {
@@ -134,12 +132,10 @@
   }
 
   @media screen and (min-width: 769px) and (max-width: 1199px) {
-    padding: 60px;
     width: 100%;
   }
 
   @media screen and (min-width: 1200px) {
     width: 100%;
-    padding: 120px;
   }
 }

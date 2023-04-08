@@ -1,5 +1,6 @@
+@import "./variables";
 header {
-  background: #3c3a39;
+  background: $navbar-color;
   height: 90px;
   width: 100%;
 
@@ -7,25 +8,22 @@ header {
     height: 100%;
     align-items: center;
     justify-content: space-between;
-    padding-right: 20px;
 
     .logo {
-      color: #fff;
-      padding: 0 20px;
+      color: $white-text-color;
       font-family: "Roboto", sans-serif;
       font-weight: 700;
       font-size: 15px;
       font-style: normal;
+      text-decoration: none;
 
       @media screen and (min-width: 768px) {
         font-size: 20px;
         padding: 0;
-        margin-left: 80px;
       }
     }
 
     .header_list {
-      margin-right: 80px;
       align-items: center;
 
       #check {
@@ -41,20 +39,39 @@ header {
         margin: 0 5px;
 
         a {
-          color: #fff;
+          color: $white-text-color;
           font-size: 18px;
           text-decoration: none;
+
+          &:hover {
+            color: $primary-color;
+          }
         }
       }
     }
 
     .burgeur {
-      margin-right: 20px;
-      font-size: 50px;
-
       @media screen and (min-width: 768px) {
         display: none;
       }
     }
   }
+  
+  @media screen and (max-width: 767px) {
+    padding-left: $padding-phones;
+    padding-right: $padding-phones;
+  }
+  @media screen and (min-width: 768px) {
+    padding-left: $padding-tablets;
+    padding-right: $padding-tablets;
+  }
+  @media screen and (min-width: 769px) and  (max-width: 1280px) {
+    padding-left: $padding-pc;
+    padding-right: $padding-pc;
+  }
+  @media screen and (min-width: 1281px) {
+    padding-left: $padding-large-screens;
+    padding-right: $padding-large-screens;
+  }
+
 }

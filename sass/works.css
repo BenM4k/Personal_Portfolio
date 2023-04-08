@@ -1,6 +1,5 @@
 .work_section {
   background-color: #fff;
-  padding: 0 30px;
   padding-bottom: 100px;
 }
 .work_section .work_head .title {
@@ -238,14 +237,12 @@
   .work_section {
     flex-direction: column;
     margin-top: 50px;
-    padding: 60px 60px;
     gap: 20px;
   }
 }
 @media screen and (min-width: 1200px) {
   .work_section {
     flex-direction: column;
-    padding: 60px 120px;
     margin-top: 50px;
     gap: 20px;
   }

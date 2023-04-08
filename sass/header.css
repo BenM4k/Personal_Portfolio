@@ -7,25 +7,22 @@ header nav {
   height: 100%;
   align-items: center;
   justify-content: space-between;
-  padding-right: 20px;
 }
 header nav .logo {
-  color: #fff;
-  padding: 0 20px;
+  color: #f1f1f1;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 15px;
   font-style: normal;
+  text-decoration: none;
 }
 @media screen and (min-width: 768px) {
   header nav .logo {
     font-size: 20px;
     padding: 0;
-    margin-left: 80px;
   }
 }
 header nav .header_list {
-  margin-right: 80px;
   align-items: center;
 }
 header nav .header_list #check {
@@ -41,16 +38,39 @@ header nav .header_list .list {
   margin: 0 5px;
 }
 header nav .header_list .list a {
-  color: #fff;
+  color: #f1f1f1;
   font-size: 18px;
   text-decoration: none;
 }
-header nav .burgeur {
-  margin-right: 20px;
-  font-size: 50px;
+header nav .header_list .list a:hover {
+  color: #de7a22;
 }
 @media screen and (min-width: 768px) {
   header nav .burgeur {
     display: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  header {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+@media screen and (min-width: 768px) {
+  header {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1280px) {
+  header {
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+}
+@media screen and (min-width: 1281px) {
+  header {
+    padding-left: 360px;
+    padding-right: 360px;
   }
 }/*# sourceMappingURL=header.css.map */
