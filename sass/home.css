@@ -8,13 +8,12 @@ main .home {
   background-size: 270px;
   background-position: bottom 0 right -20px;
   background-color: #1c1a19;
-  padding-bottom: 250px;
+  padding-bottom: 380px;
   width: 100%;
 }
 main .home .headline {
   position: relative;
-  padding-top: 200px;
-  padding-left: 30px;
+  padding-top: 100px;
 }
 main .home .headline .description {
   color: #fff;

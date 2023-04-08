@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Crete+Round:ital@0;1&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
-@import "./header", "./home", "./works", "./about", "./contact", "./footer";
+@import "./header", "./home", "./works", "./about", "./contact", "./footer", "./variables";
 
 * {
   box-sizing: border-box;
@@ -88,4 +88,26 @@ body {
 .button_enabled:disabled {
   background: #f4f1f0;
   color: #5b5957;
+}
+
+section {
+  @media screen and (max-width: 767px) {
+    padding-left: $padding-phones;
+    padding-right: $padding-phones;
+  }
+
+  @media screen and (min-width: 768px) {
+    padding-left: $padding-tablets;
+    padding-right: $padding-tablets;
+  }
+
+  @media screen and (min-width: 769px) and  (max-width: 1280px) {
+    padding-left: $padding-pc;
+    padding-right: $padding-pc;
+  }
+
+  @media screen and (min-width: 1281px) {
+    padding-left: $padding-large-screens;
+    padding-right: $padding-large-screens;
+  }
 }
