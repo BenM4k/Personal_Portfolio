@@ -1,4 +1,5 @@
 @import "./variables";
+
 header {
   background: $navbar-color;
   height: 90px;
@@ -56,22 +57,24 @@ header {
       }
     }
   }
-  
+
   @media screen and (max-width: 767px) {
     padding-left: $padding-phones;
     padding-right: $padding-phones;
   }
+
   @media screen and (min-width: 768px) {
     padding-left: $padding-tablets;
     padding-right: $padding-tablets;
   }
+
   @media screen and (min-width: 769px) and  (max-width: 1280px) {
     padding-left: $padding-pc;
     padding-right: $padding-pc;
   }
+
   @media screen and (min-width: 1281px) {
     padding-left: $padding-large-screens;
     padding-right: $padding-large-screens;
   }
-
 }
