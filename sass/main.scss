@@ -101,12 +101,12 @@ section {
     padding-right: $padding-tablets;
   }
 
-  @media screen and (min-width: 769px) and  (max-width: 1280px) {
+  @media screen and (min-width: 769px) and  (max-width: 1450px) {
     padding-left: $padding-pc;
     padding-right: $padding-pc;
   }
 
-  @media screen and (min-width: 1281px) {
+  @media screen and (min-width: 1450px) {
     padding-left: $padding-large-screens;
     padding-right: $padding-large-screens;
   }
