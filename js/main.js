@@ -8,5 +8,6 @@ burgeur.addEventListener('click', () => {
 links.forEach((link) => {
   link.addEventListener('click', () => {
     navbar.classList.remove('active');
+    burgeur.classList.remove('bx-x');
   });
 });
