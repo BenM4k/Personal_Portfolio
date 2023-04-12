@@ -261,10 +261,10 @@
     width: 90vw;
     height: 80vh;
     padding: 20px 60px 20px 60px;
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -70%) scale(0);
+    transform: translate(-50%, -50%) scale(0);
     background: #fff;
     z-index: 2;
 
@@ -369,7 +369,7 @@
 
     .popup {
       transition: all 0.3ms ease-in-out;
-      transform: translate(-50%, -70%) scale(1);
+      transform: translate(-50%, -50%) scale(1);
     }
   }
 

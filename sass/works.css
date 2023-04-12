@@ -235,8 +235,8 @@
 }
 .work_section .overlay {
   position: fixed;
-  top: 0px;
-  left: 0px;
+  top: 0;
+  left: 0;
   width: 100vw;
   height: 100vh;
   background: rgba(0, 0, 0, 0.7);
@@ -248,10 +248,10 @@
   width: 90vw;
   height: 80vh;
   padding: 20px 60px 20px 60px;
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -70%) scale(0);
+  transform: translate(-50%, -50%) scale(0);
   background: #fff;
   z-index: 2;
 }
@@ -348,7 +348,7 @@
 }
 .work_section.active .popup {
   transition: all 0.3ms ease-in-out;
-  transform: translate(-50%, -70%) scale(1);
+  transform: translate(-50%, -50%) scale(1);
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .work_section {
