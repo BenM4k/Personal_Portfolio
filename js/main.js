@@ -11,3 +11,11 @@ links.forEach((link) => {
     burgeur.classList.remove('bx-x');
   });
 });
+
+const work = document.querySelector('#works');
+function togglePopup() {
+  work.classList.toggle('active');
+}
+document.querySelector('.close_btn').addEventListener('click', () => {
+  work.classList.remove('active');
+});
