@@ -74,7 +74,6 @@ main .home .headline_list {
   margin-top: 30px;
   align-items: center;
   justify-content: flex-start;
-  z-index: 2;
 }
 main .home .headline_list li {
   margin-right: 20px;

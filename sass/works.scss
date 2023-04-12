@@ -245,6 +245,134 @@
     }
   }
 
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    z-index: 1;
+    display: none;
+  }
+
+  .popup {
+    width: 90vw;
+    height: 80vh;
+    padding: 20px 60px 20px 60px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -70%) scale(0);
+    background: #fff;
+    z-index: 2;
+
+    .close_btn {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      font-size: 25px;
+      color: #222;
+    }
+
+    .popup_heading {
+      width: 100%;
+
+      h2 {
+        font-family: 'Crete Round', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 44px;
+
+        @media screen and (max-width: 768px) {
+          font-size: 20px;
+        }
+      }
+
+      ul {
+        gap: 10px;
+        margin-top: 10px;
+      }
+    }
+
+    .popup_content {
+      width: 100%;
+      margin-top: 20px;
+      gap: 20px;
+
+      .popup_content_desc {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 40%;
+        gap: 30px;
+
+        p {
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 30px;
+
+          @media screen and (max-width: 768px) {
+            font-size: 12px;
+            line-height: 15px;
+          }
+        }
+
+        ul {
+          gap: 10px;
+          justify-content: space-between;
+
+          .popup_content_btn {
+            display: flex;
+            align-items: center;
+
+            img {
+              margin-left: 10px;
+
+              &:hover {
+                background-color: #ff6b00;
+              }
+            }
+          }
+
+          @media screen and (min-width: 768px) {
+            justify-content: flex-start;
+          }
+        }
+
+        @media screen and (max-width: 768px) {
+          width: 100%;
+          gap: 10px;
+        }
+      }
+
+      @media screen and (max-width: 768px) {
+        flex-direction: column;
+        height: 450px;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      padding: 10px 20px 10px 20px;
+      height: 90vh;
+    }
+  }
+
+  &.active {
+    .overlay {
+      display: block;
+    }
+
+    .popup {
+      transition: all 0.3ms ease-in-out;
+      transform: translate(-50%, -70%) scale(1);
+    }
+  }
+
   @media screen and (min-width: 768px) and (max-width: 1199px) {
     flex-direction: column;
     margin-top: 50px;
