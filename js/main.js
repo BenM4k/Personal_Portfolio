@@ -163,27 +163,27 @@ document.querySelector('#submit').addEventListener('submit', (e) => {
   }
 });
 
-function storeForm(e){
-  let name = document.querySelector('#name');
-  let email = document.querySelector('#email');
-  let message = document.querySelector('#message');
+function storeForm() {
+  const name = document.querySelector('#name');
+  const email = document.querySelector('#email');
+  const message = document.querySelector('#message');
 
   const form = {
     name: name.value,
     email: email.value,
     message: message.value,
-  }
+  };
 
   localStorage.setItem('form', JSON.stringify(form));
-}local_data_storage
+}
 
 document.querySelector('#submit').addEventListener('submit', storeForm);
 
 window.onload = () => {
-  formData = JSON.parse(localStorage.getItem('form'));
+  const formData = JSON.parse(localStorage.getItem('form'));
   if (formData) {
     document.querySelector('#name').value = formData.name;
     document.querySelector('#email').value = formData.email;
     document.querySelector('#message').value = formData.message;
   }
-}
+};
