@@ -177,7 +177,7 @@ function storeForm() {
   localStorage.setItem('form', JSON.stringify(form));
 }
 
-document.querySelector('#submit').addEventListener('submit', storeForm);
+document.querySelector('#submit').addEventListener('input', storeForm);
 
 window.onload = () => {
   const formData = JSON.parse(localStorage.getItem('form'));
