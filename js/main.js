@@ -162,3 +162,28 @@ document.querySelector('#submit').addEventListener('submit', (e) => {
     error.textContent = 'Please ensure email is in lower case';
   }
 });
+
+function storeForm() {
+  const name = document.querySelector('#name');
+  const email = document.querySelector('#email');
+  const message = document.querySelector('#message');
+
+  const form = {
+    name: name.value,
+    email: email.value,
+    message: message.value,
+  };
+
+  localStorage.setItem('form', JSON.stringify(form));
+}
+
+document.querySelector('#submit').addEventListener('input', storeForm);
+
+window.onload = () => {
+  const formData = JSON.parse(localStorage.getItem('form'));
+  if (formData) {
+    document.querySelector('#name').value = formData.name;
+    document.querySelector('#email').value = formData.email;
+    document.querySelector('#message').value = formData.message;
+  }
+};
