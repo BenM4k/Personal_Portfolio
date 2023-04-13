@@ -162,3 +162,19 @@ document.querySelector('#submit').addEventListener('submit', (e) => {
     error.textContent = 'Please ensure email is in lower case';
   }
 });
+
+function storeForm(e){
+  let name = document.querySelector('#name');
+  let email = document.querySelector('#email');
+  let message = document.querySelector('#message');
+
+  const form = {
+    name: name.value,
+    email: email.value,
+    message: message.value,
+  }
+
+  localStorage.setItem('form', JSON.stringify(form));
+}
+
+document.querySelector('#submit').addEventListener('submit', storeForm);
