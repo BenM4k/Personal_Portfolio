@@ -148,3 +148,17 @@ projectButton.forEach((btn) => {
     }
   });
 });
+
+function isLowerCase(email) {
+  const mail = email.value;
+  const emailRegex = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/;
+  return emailRegex.test(mail) && mail.toUpperCase() !== mail;
+}
+const email = document.getElementById('email');
+document.querySelector('#submit').addEventListener('submit', (e) => {
+  if (isLowerCase(email) !== true) {
+    e.preventDefault();
+    const error = document.querySelector('small');
+    error.textContent = 'Please ensure email is in lower case';
+  }
+});
