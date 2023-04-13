@@ -1,96 +1,3 @@
-const projects = {
-  projectHeader: {
-    title: 'Multi-Post Stories header',
-    body: `header A daily selection of privately 
-    personalized reads; no accounts 
-    or sign-ups required. has been 
-    the industry's standard dummy 
-    text ever since the 1500s, when 
-    an unknown printer took a 
-    standard dummy text.`,
-    button: [
-      'html', 'css', 'Bootstrap', 'Ruby',
-    ],
-  },
-
-  projectOne: {
-    title: 'Multi-Post Stories pj1',
-    body: `pj1 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s.
-        
-    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releax map lapora verita.`,
-    button: [
-      'html', 'Bootstrap', 'Ruby on Rails',
-    ],
-  },
-
-  projectTwo: {
-    title: 'Multi-Post Stories pj2',
-    body: `pj2 A daily selection of privately 
-    personalized reads; no accounts 
-    or sign-ups required. has been 
-    the industry's standard dummy 
-    text ever since the 1500s, when 
-    an unknown printer took a 
-    standard dummy text.`,
-    button: [
-      'html', 'css',
-    ],
-  },
-  projectThree: {
-    title: 'Multi-Post Stories pj3',
-    body: `pj3 A daily selection of privately 
-    personalized reads; no accounts 
-    or sign-ups required. has been 
-    the industry's standard dummy 
-    text ever since the 1500s, when 
-    an unknown printer took a 
-    standard dummy text.`,
-    button: [
-      'Bootstrap', 'Ruby',
-    ],
-  },
-  projectFour: {
-    title: 'Multi-Post Stories pj4',
-    body: ` pj4 A daily selection of privately 
-    personalized reads; no accounts 
-    or sign-ups required. has been 
-    the industry's standard dummy 
-    text ever since the 1500s, when 
-    an unknown printer took a 
-    standard dummy text.`,
-    button: [
-      'html', 'css', 'Bootstrap', 'Ruby',
-    ],
-  },
-  projectFive: {
-    title: 'Multi-Post Stories pj5',
-    body: `pj5 A daily selection of privately 
-    personalized reads; no accounts 
-    or sign-ups required. has been 
-    the industry's standard dummy 
-    text ever since the 1500s, when 
-    an unknown printer took a 
-    standard dummy text.`,
-    button: [
-      'html', 'css', 'Bootstrap',
-    ],
-  },
-  projectSix: {
-    title: 'Multi-Post Stories pj6',
-    body: `pj6 A daily selection of privately 
-    personalized reads; no accounts 
-    or sign-ups required. has been 
-    the industry's standard dummy 
-    text ever since the 1500s, when 
-    an unknown printer took a 
-    standard dummy text.`,
-    button: [
-      'html', 'css', 'Ruby',
-    ],
-  },
-
-};
-
 const burgeur = document.querySelector('.burgeur');
 const navbar = document.querySelector('header');
 const links = document.querySelectorAll('.check');
@@ -105,43 +12,139 @@ links.forEach((link) => {
   });
 });
 
-const work = document.querySelector('#works');
-const projectTitle = document.querySelector('#project_title');
-const projectBody = document.querySelector('.project_body');
-const projectButton = document.querySelectorAll('.see_project');
-let project = [];
+const workSection = document.querySelector('.works');
 
-function togglePopup() {
-  work.classList.toggle('active');
+const projects = [
+  {
+    projectId: 'projectOne',
+    title: 'Multi-Post Stories header',
+    name: 'Ben',
+    body: `header A daily selection of privately 
+    personalized reads; no accounts 
+    or sign-ups required. has been 
+    the industry's standard dummy 
+    text ever since the 1500s, when 
+    an unknown printer took a 
+    standard dummy text.`,
+    techs: ['html', 'css', 'Bootstrap', 'Ruby'],
+    img: 'assets/Img Placeholder.png',
+    liveLink: 'https://benm4k.github.io/Personal_Portfolio/',
+    sourceLink: 'https://github.com/BenM4k/Personal_Portfolio',
+  },
+
+  {
+    projectId: 'projectTwo',
+    title: 'Keeping track of hundreds  of components website',
+    name: 'Luigi',
+    body: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s.
+        
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releax map lapora verita.`,
+    techs: ['html', 'Bootstrap', 'Ruby on Rails'],
+    img: 'assets/Snapshoot Portfolio.png',
+    liveLink: 'https://benm4k.github.io/Personal_Portfolio/',
+    sourceLink: 'https://github.com/BenM4k/Personal_Portfolio',
+  },
+
+  {
+    projectId: 'projectThree',
+    title: 'Multi-Post Stories pj1',
+    name: 'Luigi',
+    body: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s.
+        
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releax map lapora verita.`,
+    techs: ['html', 'Bootstrap', 'Ruby on Rails'],
+    img: 'assets/Img Placeholder.png',
+    liveLink: 'https://benm4k.github.io/Personal_Portfolio/',
+    sourceLink: 'https://github.com/BenM4k/Personal_Portfolio',
+  },
+];
+
+function createWork(project) {
+  const work = `
+  <div class="work1 flex_column">
+    <img src="${project.img}" alt="placeholder">
+    <div class="work1_head">
+      <h2 class="work1_title">${project.title}</h2>
+      <p class="work1_text">${project.body}</p>
+      <h3>${project.name}</h3>
+      <ul class="work1_list flex">
+        ${project.techs.map((tech) => (
+    `<li class="work_button">${tech}</li>`
+  )).join('')}
+      </ul>
+      <button class="work1_button button_enabled see_project ${project.projectId}" id="${project.projectId}">See project</button>
+    </div>      
+  </div>`;
+
+  return work;
 }
 
-projectButton.forEach((btn) => {
-  btn.addEventListener('click', () => {
-    if (btn.classList.contains('work1_button')) {
-      project = 'projectHeader';
-    } else if (btn.classList.contains('project1')) {
-      project = 'projectOne';
-    } else if (btn.classList.contains('project2')) {
-      project = 'projectTwo';
-    } else if (btn.classList.contains('project3')) {
-      project = 'projectThree';
-    } else if (btn.classList.contains('project4')) {
-      project = 'projectFour';
-    } else if (btn.classList.contains('project5')) {
-      project = 'projectFive';
-    } else if (btn.classList.contains('project6')) {
-      project = 'projectSix';
-    }
+for (let i = 0; i < projects.length; i += 1) {
+  const work = createWork(projects[i]);
+  workSection.innerHTML += work;
+}
 
-    projectTitle.textContent = projects[project].title;
-    projectBody.textContent = projects[project].body;
-  });
-});
+const works = document.querySelector('#works');
+const projectButton = document.querySelectorAll('.see_project');
+const popupSection = document.querySelector('.popup');
+
+function createPop(project = null) {
+  const popup = `
+  <div class="bx bx-menu close_btn bx-x">
+      <i class="fa fa-bars"></i>
+  </div>
+
+  <div class="popup_heading">
+    <h2 id="project_title">${project.title}</h2>
+    <ul class="flex project_ul">
+    ${project.techs.map((tech) => (
+    `<li class="work_button">${tech}</li>`
+  )).join('')}
+    </ul>
+    </div>
+    <div class="popup_content flex">
+        <img src="${project.img}" alt="placeholder">
+        <div class="popup_content_desc">
+            <p class="work1_text">${project.body}</p>
+            <ul class="flex">
+                <li class="button_enabled popup_content_btn"><a href="${project.liveLink}">See live <img src="assets/Icon-see live.svg" alt="see_live"></a></li>
+                <li class="button_enabled popup_content_btn"><a href="${project.sourceLink}">See source <img src="assets/Icon -GitHub.png" alt="icon_github"></a></li>
+            </ul>
+        </div>
+    </div>
+  `;
+
+  return popup;
+}
+
+function togglePopup() {
+  works.classList.toggle('active');
+}
 
 projectButton.forEach((btn) => {
   btn.addEventListener('click', togglePopup);
 });
 
-document.querySelector('.close_btn').addEventListener('click', () => {
-  work.classList.remove('active');
+projectButton.forEach((btn) => {
+  btn.addEventListener('click', () => {
+    if (btn.classList.contains('projectOne')) {
+      const pop = createPop(projects[0]);
+      popupSection.innerHTML = pop;
+      document.querySelector('.close_btn').addEventListener('click', () => {
+        works.classList.remove('active');
+      });
+    } else if (btn.classList.contains('projectTwo')) {
+      const pop = createPop(projects[1]);
+      popupSection.innerHTML = pop;
+      document.querySelector('.close_btn').addEventListener('click', () => {
+        works.classList.remove('active');
+      });
+    } else if (btn.classList.contains('projectThree')) {
+      const pop = createPop(projects[2]);
+      popupSection.innerHTML = pop;
+      document.querySelector('.close_btn').addEventListener('click', () => {
+        works.classList.remove('active');
+      });
+    }
+  });
 });
