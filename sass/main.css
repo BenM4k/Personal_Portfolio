@@ -737,6 +737,10 @@ main .home .headline_list li {
   align-items: center;
   justify-content: center;
 }
+.contacts form ul .form_button small {
+  color: red;
+  padding-left: 10px;
+}
 @media screen and (min-width: 768px) {
   .contacts form ul {
     width: 100%;
