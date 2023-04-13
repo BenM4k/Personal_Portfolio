@@ -175,6 +175,15 @@ function storeForm(e){
   }
 
   localStorage.setItem('form', JSON.stringify(form));
-}
+}local_data_storage
 
 document.querySelector('#submit').addEventListener('submit', storeForm);
+
+window.onload = () => {
+  formData = JSON.parse(localStorage.getItem('form'));
+  if (formData) {
+    document.querySelector('#name').value = formData.name;
+    document.querySelector('#email').value = formData.email;
+    document.querySelector('#message').value = formData.message;
+  }
+}
